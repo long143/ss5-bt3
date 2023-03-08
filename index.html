@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Caculator</h1>
+<div>
+    <input type="number" id="amount1" name="amount1">
+    <input type="number" id="amount2" name="amount2">
+</div>
+    <div>
+        <button type="button" onclick="Addition()">Addition(+)</button>
+        <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+        <button type="button" onclick="Multiplication()">Multiplication(X)</button>
+        <button type="button" onclick="Division()">Division(/)</button>
+    </div>
+    <p>Result Division <span id="result">:</span></p>
+    <script>
+        function Addition(){
+            let amount1 = +document.getElementById('amount1').value;
+            let amount2 = +document.getElementById('amount2').value;
+            let add = amount1 + amount2 ;
+            console.log('addition',add);
+            document.getElementById('result').innerHTML =  ':' +add
+        }
+        function Subtraction(){
+            let amount1 = +document.getElementById('amount1').value;
+            let amount2 = +document.getElementById('amount2').value;
+            let sub = amount1 - amount2 ;
+            console.log('subtraction',sub);
+            document.getElementById('result').innerHTML =  ':' +sub
+        }
+        function Multiplication(){
+            let amount1 = +document.getElementById('amount1').value;
+            let amount2 = +document.getElementById('amount2').value;
+            let mul= amount1 * amount2 ;
+            console.log('multiplication',mul);
+            document.getElementById('result').innerHTML =  ':' +mul
+        }
+        function Division(){
+            let amount1 = +document.getElementById('amount1').value;
+            let amount2 = +document.getElementById('amount2').value;
+            let div = amount1 / amount2 ;
+            console.log('division',div);
+            document.getElementById('result').innerHTML =  ':' +div
+        }
+    </script>
+</form>
+</body>
+</html>
